@@ -7,6 +7,7 @@ sudo gem install rails
 git clone https://github.com/iobridge/thingspeak.git
 cp thingspeak/config/database.yml.example thingspeak/config/database.yml
 cd thingspeak
+echo "gem: --no-rdoc --no-ri" >> ${HOME}/.gemrc
 bundle install
 bundle exec rake db:create
 bundle exec rake db:schema:load
