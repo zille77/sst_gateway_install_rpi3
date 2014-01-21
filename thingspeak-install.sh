@@ -1,5 +1,5 @@
 #!/bin/bash
-# Automatic install of Thingspeak server on Ubuntu 12.04
+# Automatic install of Thingspeak server on Ubuntu 12.04 / Raspbmc / Debian (?)
 
 sudo apt-get update
 sudo apt-get -y install build-essential ruby1.9.3 git mysql-server mysql-client libmysqlclient-dev libxml2-dev libxslt-dev
