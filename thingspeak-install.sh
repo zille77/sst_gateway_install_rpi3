@@ -4,7 +4,7 @@
 
 ## Install required packages
 sudo apt-get update
-sudo apt-get -y install build-essential git mysql-server mysql-client libmysqlclient-dev libxml2-dev libxslt-dev libssl-dev
+sudo apt-get -y install build-essential git mysql-server mysql-client libmysqlclient-dev libxml2-dev libxslt-dev libssl-dev libsqlite3-dev
 
 ## Install ruby
 wget http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.4.tar.gz
