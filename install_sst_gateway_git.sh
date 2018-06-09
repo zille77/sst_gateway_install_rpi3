@@ -1,5 +1,10 @@
 #!/bin/bash
 # Automatic install 
+# pull this file with wget -N ... install_sst_gatewasy_git.sh
+
+# #  in case of Bash ^M error during exec apply this
+# cat install_sst_gateway_git.sh | tr -d '\r' > install_exec.sh 
+
 
 ## check root level
 if [[ $EUID -ne 0 ]]; then
