@@ -1,6 +1,7 @@
 #!/bin/bash
 # Automatic install 
 # pull this file with wget -N ... install_sst_gatewasy_git.sh
+# pull also possible from wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway.sh
 
 # #  in case of Bash ^M error during exec apply this
 # cat install_sst_gateway_git.sh | tr -d '\r' > install_exec.sh 
