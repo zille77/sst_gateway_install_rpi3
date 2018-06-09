@@ -1,29 +1,23 @@
 #!/bin/bash
-# Automatic install of Thingspeak server on Ubuntu 12.04 / Raspbmc / Debian (?)
-# Updated to use ruby 2.1.4
+# Automatic install 
+
+## check root level
+if [[ $EUID -ne 0 ]]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
 
 ## Install required packages
 sudo apt-get update
-sudo apt-get -y install build-essential git mysql-server mysql-client libmysqlclient-dev libxml2-dev libxslt-dev libssl-dev libsqlite3-dev
 
-## Install ruby
-wget http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.4.tar.gz
-tar xvzf ruby-2.1.4.tar.gz
-cd ruby-2.1.4
-./configure
-make
-sudo make install
-cd ..
- 
-## Install rails
-echo "gem: --no-rdoc --no-ri" >> ${HOME}/.gemrc
-sudo gem install rails
+sudo apt-get -y install apache2 php7.0 libusb-1.0-0-dev
 
-## Install thingspeak
-git clone https://github.com/iobridge/thingspeak.git
-cp thingspeak/config/database.yml.example thingspeak/config/database.yml
-cd thingspeak
-bundle install
-bundle exec rake db:create 
-bundle exec rake db:schema:load
-rails server
+## Install sst cpp program
+wget www.smart-sensor-technology.de/download/sst_gateway_program.zip
+sudo unzip -o sst_gateway_program.zip -d /home/pi
+
+cd /home/pi/cpp_program
+sudo chmod +x makefile
+sudo ./makefile
+sudo chmod +x run.sh
+sudo chmod +x stop.sh
