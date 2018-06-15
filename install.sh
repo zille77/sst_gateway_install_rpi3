@@ -233,7 +233,7 @@ target_text="${var0_1}\n${var0_2}\n${var0_3}\n\n${var1}\n${var2}\n${var2_2}\n${v
 #new linefeed then 
 #start cpp program, then 
 #"exit 0"
-	sed -i "s/$word2/$target_text/g" "/etc/rc.local"			#replace "exit 0" with longer target string generated above
+	sed -i "s/$word2/$target_text/g" /etc/rc.local			#replace "exit 0" with longer target string generated above
 fi
 #rc.local-end-------------------------------------------------------------------------------------------------------------------
 
