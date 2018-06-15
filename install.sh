@@ -213,26 +213,26 @@ if [ "$cmd" != "0" ]; then
 else
 	echo "sudo ifdown --force ap0 not found - therefore I assume no changes made yet - will modify /etc/rc.local now"
 	
-var0_1="sudo sysctl -w net.ipv4.ip_forward=1"
-var0_2="sudo iptables -t nat -A POSTROUTING -s 192.168.10.0/24 ! -d 192.168.10.0/24 -j MASQUERADE"
-var0_3="sudo systemctl restart dnsmasq"
-	
-var1="sudo ifdown --force wlan0"
-var2="sudo ifdown --force ap0"
-var2_2="sleep 3"
-var3="sudo ifup ap0"
-#same string used here again 3 sec
-var4="sudo ifup wlan0"
-var5="cd /home/pi/cpp_program"
-var6="sudo ./main &"
-var_exit="exit 0"
-target_text="${var0_1}\n${var0_2}\n${var0_3}\n\n${var1}\n${var2}\n${var2_2}\n${var3}\n${var2_2}\n${var4}\n\${var5}\n${var6}\n\n${var_exit}"
-#3 lines for forwarding 
-#then new linefeed 
-#wlan down, ap down, sleep 3, up ap, sleep 3, up wlan, 
-#new linefeed then 
-#start cpp program, then 
-#"exit 0"
+	var0_1="sudo sysctl -w net.ipv4.ip_forward=1"
+	var0_2="sudo iptables -t nat -A POSTROUTING -s 192.168.10.0/24 ! -d 192.168.10.0/24 -j MASQUERADE"
+	var0_3="sudo systemctl restart dnsmasq"
+
+	var1="sudo ifdown --force wlan0"
+	var2="sudo ifdown --force ap0"
+	var2_2="sleep 3"
+	var3="sudo ifup ap0"
+	#same string used here again 3 sec
+	var4="sudo ifup wlan0"
+	var5="cd /home/pi/cpp_program"
+	var6="sudo ./main &"
+	var_exit="exit 0"
+	target_text="${var0_1}\n${var0_2}\n${var0_3}\n\n${var1}\n${var2}\n${var2_2}\n${var3}\n${var2_2}\n${var4}\n${var5}\n${var6}\n\n${var_exit}"
+	#3 lines for forwarding 
+	#then new linefeed 
+	#wlan down, ap down, sleep 3, up ap, sleep 3, up wlan, 
+	#new linefeed then 
+	#start cpp program, then 
+	#"exit 0"
 	sed -i "s,$word2,$target_text,g" /etc/rc.local			#replace "exit 0" with longer target string generated above
 fi
 #rc.local-end-------------------------------------------------------------------------------------------------------------------
