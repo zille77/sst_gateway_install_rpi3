@@ -6,7 +6,8 @@ Install (Thanks Tass to fix this guide)
 
 ssh into your raspiberry
 
-git clone https://github.com/zille77/wsst_gateway_install_rpi3
+git clone https://github.com/zille77/sst_gateway_install_rpi3
+cd sst_gateway_install_rpi3
 chmod +x install.sh
 sudo apt-get update
 sudo ./install.sh
