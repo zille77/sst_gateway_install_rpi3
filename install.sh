@@ -224,7 +224,7 @@ else
 	#same string used here again 3 sec
 	var4="sudo ifup wlan0"
 	var5="cd /home/pi/cpp_program"
-	var6="sudo ./main &"
+	var6="sudo ./main \&"
 	var_exit="exit 0"
 	target_text="${var0_1}\n${var0_2}\n${var0_3}\n\n${var1}\n${var2}\n${var2_2}\n${var3}\n${var2_2}\n${var4}\n${var5}\n${var6}\n\n${var_exit}"
 	#3 lines for forwarding 
