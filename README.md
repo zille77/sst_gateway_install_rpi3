@@ -17,10 +17,10 @@ still as sudo su
 1. wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway3.sh
 
 (for setup with Ethernet Connection only)
-1.1 wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway_eth.sh		
+2. wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway_eth.sh		
 
-2. chmod +x install_sst_gateway3.sh						
-3. ./install_sst_gateway3.sh		
+3. chmod +x install_sst_gateway3.sh						
+4. ./install_sst_gateway3.sh		
 If you want to see all log data during installation install like this
-3.1 ./install_sst_gateway3.sh >> log.txt			
-3.2 view data with nano log.txt
+4.1 ./install_sst_gateway3.sh >> log.txt			
+4.2 view data with nano log.txt
