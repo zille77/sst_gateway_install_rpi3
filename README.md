@@ -8,7 +8,7 @@ or
 1. sudo su
 2. raspi-config
 
-SSH enable<nbsp>
+SSH enable<br>
 Set Keyboard Layout 
 
 Installation process:
