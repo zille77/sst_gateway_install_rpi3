@@ -12,6 +12,8 @@ SSH enable<br>
 Set Keyboard Layout 
 
 Installation process:
+Raspberry Pi needs internet connection either bei WLAN0 (with raspi-config) or LAN Connection<br>
+
 still as sudo su
 
 (for setup with AP and WLAN)<br>
