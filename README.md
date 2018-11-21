@@ -14,9 +14,11 @@ Set Keyboard Layout
 Installation process:
 still as sudo su
 (for setup with AP and WLAN)
+
 1. wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway3.sh
 
 (for setup with Ethernet Connection only)
+
 2. wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway_eth.sh		
 
 3. chmod +x install_sst_gateway3.sh						
