@@ -1,9 +1,21 @@
-wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway3.sh		
+Use Raspberry 1, 2, 3 or zero
 
-chmod +x install_sst_gateway3.sh						
+Use RPI image:
+2018-04-18-raspbian-stretch-lite
+or 
+2018-10-09-raspbian-stretch-lite
 
-./install_sst_gateway3.sh		
+1. sudo su
+2. raspi-config
 
-wenn du die Ausgaben während der Installation sehen willst, dann so ausführen				
-./install_sst_gateway3.sh >> log.txt			
-und dann mit nano log.txt ansehen	
+SSH enable
+Set Keyboard Layout 
+
+Installation process:
+still as sudo su
+1. wget -N http://www.smart-sensor-technology.de/download/install_sst_gateway3.sh		
+2. chmod +x install_sst_gateway3.sh						
+3. ./install_sst_gateway3.sh		
+If you want to see all log data during installation install like this
+3.1 ./install_sst_gateway3.sh >> log.txt			
+3.2 view data with nano log.txt
