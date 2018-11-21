@@ -1,6 +1,6 @@
-Use Raspberry 1, 2, 3 or zero
+Use Hardware Raspberry 1, 2, 3 or zero
 
-Use RPI image:
+Use Software Raspberry image:
 2018-04-18-raspbian-stretch-lite
 or 
 2018-10-09-raspbian-stretch-lite
